@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import SearchBar from './SearchBar';
 
 function Header() {
   return (
@@ -10,6 +11,7 @@ function Header() {
           <Link to="/haqqimizda" className="hover:text-sky transition">Haqqımızda</Link>
           <Link to="/elaqe" className="hover:text-sky transition">Əlaqə</Link>
         </nav>
+        <div className="ml-4"><SearchBar /></div>
       </div>
     </header>
   );

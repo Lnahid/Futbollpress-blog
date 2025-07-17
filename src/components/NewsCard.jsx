@@ -1,5 +1,6 @@
 import LikeButton from './LikeButton';
 import ShareIcons from './ShareIcons';
+import { Link } from 'react-router-dom';
 
 function NewsCard({ post, onLike }) {
   return (
@@ -12,7 +13,7 @@ function NewsCard({ post, onLike }) {
           <div className="text-xs text-slate mb-2">{new Date(post.created_at).toLocaleDateString()}</div>
         </div>
         <div className="flex items-center gap-4 mt-2">
-          <a href={`/post/${post.id}`} className="text-sky hover:underline font-medium">Davamını oxu</a>
+          <Link to={`/post/${post.id}`} className="text-sky hover:underline font-medium">Davamını oxu</Link>
           <LikeButton postId={post.id} count={post.likes_count} onLike={onLike} />
           <ShareIcons post={post} />
         </div>
